@@ -3,13 +3,14 @@ body {
   font-family: sans-serif;
   text-align: center;
   background: #eef;
+  overflow: hidden; /* chặn vuốt trang di chuyển */
 }
 
 #game {
   position: relative;
   width: 100%;
   max-width: 500px;
-  height: 300px;
+  height: 400px;
   margin: 0 auto;
   background: #fff;
   border: 2px solid #000;
@@ -21,20 +22,104 @@ body {
   width: 30px;
   height: 30px;
   background: red;
-  bottom: 0;
-  left: 50px;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
 .obstacle {
   position: absolute;
   width: 30px;
-  height: 60px;
+  height: 30px;
   background: green;
-  bottom: 0;
-  right: 0;
 }
-#startBtn {
+
+#controls {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto 0;
+  max-width: 500px;
+}
+
+.ctrl {
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  user-select: none;
+  margin: 0 5px;
+}
+
+#swipeGuide {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  pointer-events: none;
+}
+
+#swipeGuide img {
+  width: 80px;
+  height: auto;
+  opacity: 0.7;
+  user-select: none;
+}
+
+#score {
+  margin: 10px 0;
+}
+
+#startBtn, #restartBtn {
+  margin: 10px 0;
   padding: 10px 20px;
-  margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+/* Joystick area */
+#joystickArea {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  touch-action: none;
+  position: relative;
+  margin: 10px auto 0;
+}
+
+/* Joystick knob */
+#joystickKnob {
+  width: 30px;
+  height: 30px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.9;
+  position: absolute;
+  left: 35px;
+  top: 35px;
+  pointer-events: none;
+  transition: background 0.1s;
+}
+
+/* Đậm lên khi đang được chạm */
+#joystickArea.active #joystickKnob {
+  background: #000;
+}
+
+/* Ẩn nút điều khiển trên điện thoại */
+@media (max-width: 767px) {
+  #controls {
+    display: none;
+  }
+}
+#swipeGuide {
+  display: none !important;
+}
+/* Ẩn joystick ở PC */
+@media (min-width: 768px) {
+  #joystickArea {
+    display: none;
+  }
 }

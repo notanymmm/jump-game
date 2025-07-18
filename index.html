@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jump Game</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trò chơi tránh chướng ngại vật</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 id="score">Score: 0</h1>
+  <div id="score">Score: 0 | High: 0</div>
   <button id="startBtn">Start</button>
   <div id="game">
     <div id="player"></div>
   </div>
+  
+  <div id="joystickArea">
+    <div id="joystickKnob"></div>
+  </div>
+
+  <div id="controls">
+    <div class="ctrl" data-dir="up">↑</div>
+    <div class="ctrl" data-dir="left">←</div>
+    <div class="ctrl" data-dir="right">→</div>
+    <div class="ctrl" data-dir="down">↓</div>
+  </div>
+  <div id="swipeGuide">
+    <img src="https://via.placeholder.com/80?text=↑" alt="Up">
+    <img src="https://via.placeholder.com/80?text=←" alt="Left">
+    <img src="https://via.placeholder.com/80?text=→" alt="Right">
+    <img src="https://via.placeholder.com/80?text=↓" alt="Down">
+  </div>
+  <button id="restartBtn">Chơi lại</button>
+
   <script src="game.js"></script>
+
+  
+
 </body>
 </html>
