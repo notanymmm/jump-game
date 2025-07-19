@@ -90,6 +90,20 @@ body {
   background: #000;
 }
 
+.notification {
+  position: absolute;
+  top: 10px; /* Gần sát viền trên của #game */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 10;
+}
+
 /* Ẩn nút điều khiển trên điện thoại */
 @media (max-width: 767px) {
   #controls {
