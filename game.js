@@ -1,4 +1,5 @@
-try {
+document.addEventListener('DOMContentLoaded', () => {
+  try {
   const player = document.getElementById('player');
   const game = document.getElementById('game');
   const startBtn = document.getElementById('startBtn');
@@ -347,7 +348,8 @@ try {
   restartBtn.addEventListener('click', startGame);
   loop();
 
-} catch (error) {
+  } catch (error) {
   console.error('Lỗi khởi tạo trò chơi:', error);
   alert('Lỗi: Không thể khởi động trò chơi. Vui lòng kiểm tra console để biết chi tiết.');
-}
+  }
+});
