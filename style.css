@@ -22,9 +22,8 @@ body {
   width: 30px;
   height: 30px;
   background: red;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
+  left: 235px; 
+  top: 185px;  
 }
 
 .obstacle {
@@ -53,20 +52,6 @@ body {
   margin: 0 5px;
 }
 
-#swipeGuide {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  pointer-events: none;
-}
-
-#swipeGuide img {
-  width: 80px;
-  height: auto;
-  opacity: 0.7;
-  user-select: none;
-}
-
 #score {
   margin: 10px 0;
 }
@@ -77,7 +62,6 @@ body {
   font-size: 16px;
 }
 
-/* Joystick area */
 #joystickArea {
   width: 100px;
   height: 100px;
@@ -89,7 +73,6 @@ body {
   margin: 10px auto 0;
 }
 
-/* Joystick knob */
 #joystickKnob {
   width: 30px;
   height: 30px;
@@ -103,7 +86,6 @@ body {
   transition: background 0.1s;
 }
 
-/* Đậm lên khi đang được chạm */
 #joystickArea.active #joystickKnob {
   background: #000;
 }
@@ -114,9 +96,7 @@ body {
     display: none;
   }
 }
-#swipeGuide {
-  display: none !important;
-}
+
 /* Ẩn joystick ở PC */
 @media (min-width: 768px) {
   #joystickArea {
